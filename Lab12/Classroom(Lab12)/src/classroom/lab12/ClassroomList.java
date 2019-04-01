@@ -77,13 +77,35 @@ public class ClassroomList {
     
     
     }
-    public static void removeClassroom(){
-    
+    public static boolean removeClassroom(String name){
+       
+        for (int i = 0; i < arr.size(); i++) {
+            String tempname = arr.get(i).getName();
+            if(tempname.equals(name))
+            {
+                arr.remove(i);  
+                return true;
+            }
+        }
+        return false;
+       
+        
+        
     
     
     }
-    public static void searchClassroom(){
-    
+    public static Classroom searchClassroom(String name){
+             for (int i = 0; i < arr.size(); i++) {
+            String tempname = arr.get(i).getName();
+            if(tempname.equals(name))
+            {
+               return arr.get(i);
+            }
+        }
+        return null;
+        
+        
+        
     
     
     }
